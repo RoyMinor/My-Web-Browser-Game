@@ -23,6 +23,10 @@ let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30'
 const correctAnswerPoints = 10;
 // How many questions the users get
 const maxQuestions = 10;
+//Question Duration in milliseconds ( 1000 milliseconds = 1second )
+const timeDuration = 5000;
+
+let score = 0;
 
 //Question Selection Method
 function displayRandomQuestion() {
@@ -35,8 +39,15 @@ function displayRandomQuestion() {
   displayArea.textContent = randomQuestion;
   console.log()
 
+
   document.getElementById('userAnswer').value = '';
+//Question timer method
+setTimeout(() => {
+    displayRandomQuestion();
+ }, timeDuration);
+
 }
+
 
 
 //Check answers Method
@@ -47,12 +58,19 @@ function checkAnswer() {
 
     if (currentQuestionIndex !== -1 && userAnswer.toLowerCase() === answers[currentQuestionIndex].toLowerCase()) {
         alert('Correct Answer!');
+        score += correctAnswerPoints;
+        updateScore();
     } else {
         alert('Inncorret Answer. Please try again.');
     }
     console.log(checkAnswer)
     displayRandomQuestion();
     
+}
+
+//Score display update
+function updateScore() {
+    document.getElementById('score').textContent = `Score: ${score}`;
 }
 //Buttons
 document.getElementById('button').addEventListener('click', displayRandomQuestion);
