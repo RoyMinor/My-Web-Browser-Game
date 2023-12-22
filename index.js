@@ -24,14 +24,19 @@ const incorrectAnswerPenalty = 5;
 // How many questions the users get
 const maxQuestions = 10;
 //Question Duration in milliseconds ( 1000 milliseconds = 1second )
-const timeDuration = 10000;
+const timerDuration = 15000;
 
 //Scoreboard and question tracker
 let score = 0;
 let askedQuestions = [];
 
+//Had to create a promise-based setTimeout(async)displayedRandomQuestion, checkAnswer functions
+function delay(milliseconds) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
 //Question Selection Method
-function displayRandomQuestion() {
+async function displayRandomQuestion() {
     const availableQuestions = questions.filter(q => !askedQuestions.includes(q));
 
     if (availableQuestions.length === 0) {
@@ -50,10 +55,8 @@ function displayRandomQuestion() {
   //Clear previous Answer
  document.getElementById('userAnswer').value = '';
 //Question timer method
-setTimeout(() => {
-    displayRandomQuestion();
- }, timeDuration);
-
+await delay(timerDuration);
+// Questions array
 askedQuestions.push(randomQuestion);
 
 }
@@ -61,7 +64,7 @@ askedQuestions.push(randomQuestion);
 
 
 //Check answers Method
-function checkAnswer() {
+async function checkAnswer() {
     const userAnswer = document.getElementById('userAnswer').value.trim();
     const currentQuestionIndex = questions.indexOf(document.querySelector('.questions .displayArea').textContent);
 
@@ -72,14 +75,16 @@ function checkAnswer() {
         updateScore(); //update displayed scoring
     } else {
         alert('Inncorret Answer. Please try again.');
-        score += Math.max(0, score - incorrectAnswerPenalty);
+        score -=  incorrectAnswerPenalty;
     }
+    updateScore();
+
     console.log(checkAnswer)
-    displayRandomQuestion(updateScore);
+    await displayRandomQuestion();
     
 }
 
-//Score display update
+//Function to display update
 function updateScore() {
     document.getElementById('score').textContent = `Score: ${score}`;
 }
