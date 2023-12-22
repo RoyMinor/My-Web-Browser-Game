@@ -13,12 +13,6 @@ let questions = [
  ];
 
 
-
-//Method for randomizing Questions
-// let currentQuestion = {};
-// let acceptingAnwsers = true;
-// let score = 0;
-// let questionCounter = 0;
 // let availableQuestions =[];
 // let question = [
 //     {question: "Biggest state?", answers: [{answer: "Tx", correct: false}, {answer: "Alaska", correct: true}]
@@ -43,10 +37,9 @@ function displayRandomQuestion() {
 
   document.getElementById('userAnswer').value = '';
 }
-//document.getElementById('button').addEventListener('click', buttonCommand);
 
 
-//function, checks the value of the input tag and compares to see if is matches the answers
+//Check answers Method
 function checkAnswer() {
     const userAnswer = document.getElementById('userAnswer').value.trim();
     const currentQuestionIndex = questions.indexOf(document.getElementsByClassName('questions')[0].textContent);
@@ -114,26 +107,6 @@ displayRandomQuestion();
 //     }
 
 
-
-// // Starting the game
-
-// startGame = () => {
-//     questionCounter = 0;
-//     score = 0;
-//     availableQuestions = [...question];
-//     console.log(availableQuestions);
-//     getNewQuestion();
-// };
-
-//  getNewQuestion = () => {
-  
-//     questionCounter++;
-//    const questionList = Math.floor(Math.random() * availableQuestions.length);
-//     currentQuestion = availableQuestions[questionList];
-//     question.innerText = currentQuestion.question;
-// }
-
-// startGame();
 
 
 
