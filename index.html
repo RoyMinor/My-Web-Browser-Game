@@ -27,6 +27,11 @@
      <input type="text" id="userAnswer" placeholder="type answer here">
  <!-- submit button -->
 <button id="submit">Submit Answer</button>
-<script src="index.js"></script>     
+<script src="index.js"></script>
+<script>
+    function updateScore() {
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+</script>     
 </body>
 </html>

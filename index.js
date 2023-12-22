@@ -1,4 +1,3 @@
-// get the elements from html
 // start with an array of ten questions
 let questions = [
     'What is the the biggest state in the US? ',
@@ -21,30 +20,41 @@ let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30'
 
 // How points are calculated
 const correctAnswerPoints = 10;
+const incorrectAnswerPenalty = 5;
 // How many questions the users get
 const maxQuestions = 10;
 //Question Duration in milliseconds ( 1000 milliseconds = 1second )
-const timeDuration = 5000;
+const timeDuration = 10000;
 
+//Scoreboard and question tracker
 let score = 0;
+let askedQuestions = [];
 
 //Question Selection Method
 function displayRandomQuestion() {
-  const randomIndex = Math.floor(Math.random() * questions.length);
-  const randomQuestion = questions[randomIndex];
+    const availableQuestions = questions.filter(q => !askedQuestions.includes(q));
+
+    if (availableQuestions.length === 0) {
+        alert('Game Over! Please try again');
+        return;
+    }
+  const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+  const randomQuestion = availableQuestions[randomIndex];
  console.log(randomQuestion)
-//  document.getElementById('answer').textContent;
-  //console.log('Button Clicked');
-  let displayArea= document.getElementsByClassName('questions')[0];
+
+ //Display selected question
+  let displayArea= document.querySelector('.questions .displayArea');
   displayArea.textContent = randomQuestion;
   console.log()
 
-
-  document.getElementById('userAnswer').value = '';
+  //Clear previous Answer
+ document.getElementById('userAnswer').value = '';
 //Question timer method
 setTimeout(() => {
     displayRandomQuestion();
  }, timeDuration);
+
+askedQuestions.push(randomQuestion);
 
 }
 
@@ -53,18 +63,19 @@ setTimeout(() => {
 //Check answers Method
 function checkAnswer() {
     const userAnswer = document.getElementById('userAnswer').value.trim();
-    const currentQuestionIndex = questions.indexOf(document.getElementsByClassName('questions')[0].textContent);
+    const currentQuestionIndex = questions.indexOf(document.querySelector('.questions .displayArea').textContent);
 
 
     if (currentQuestionIndex !== -1 && userAnswer.toLowerCase() === answers[currentQuestionIndex].toLowerCase()) {
         alert('Correct Answer!');
         score += correctAnswerPoints;
-        updateScore();
+        updateScore(); //update displayed scoring
     } else {
         alert('Inncorret Answer. Please try again.');
+        score += Math.max(0, score - incorrectAnswerPenalty);
     }
     console.log(checkAnswer)
-    displayRandomQuestion();
+    displayRandomQuestion(updateScore);
     
 }
 
