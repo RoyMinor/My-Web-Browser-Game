@@ -5,7 +5,14 @@
 }
 
 
-#answer {
-    /* background-color: yellow; */
-
-}
+.displayArea {
+    margin: 0 auto;
+    color:black;
+    border: 5px solid black;
+    background-color: purple;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 

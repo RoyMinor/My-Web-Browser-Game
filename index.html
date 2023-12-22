@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Browser Game</title>
+    <title>Cat vs Mouse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <!-- // question deck -->
      <!-- //score board -->
+     <div class="scoreBoard">
      <h2>Score board</h2>
+    </div>
      <!-- score count -->
      <h3>score count</h3>
-     <div class="questions"></div>
+     <!-- Questions Container -->
+<div class="questions">
+    <span class="displayArea">
+        <!-- <p id="answer">Click the button when Ready to display question</p> -->
+        <button id="button">Generate Questions</button> 
+    </span>
+</div>
 
      <!-- answers box -->
-     <input type="text" id="answer" placeholder="type answer here">
+     <input type="text" id="userAnswer" placeholder="type answer here">
  <!-- submit button -->
-<button type="submit">Submit answer</button>
+<button id="submit">Submit Answer</button>
 <script src="index.js"></script>     
 </body>
 </html>
