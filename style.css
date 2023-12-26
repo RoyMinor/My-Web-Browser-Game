@@ -1,7 +1,28 @@
+#gameContainer {
+    background-color:greenyellow;
+}
+#playerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-content: center;
+    background-color: gold;
+    width: 800px
+}
+
+.scoreBoard {
+    background-color: cornflowerblue;
+    width: 800px;
+}
 .questions {
     background-color: skyblue;
     width: 800px;
     height: 500px;
+}
+
+.scoreCount {
+    background-color: darkgoldenrod;
+    width: 800px;
 }
 
 
@@ -16,3 +37,9 @@
     justify-content: center;
     align-items: center;
 } 
+
+#raceContainer {
+    background-color: coral;
+
+    
+}
