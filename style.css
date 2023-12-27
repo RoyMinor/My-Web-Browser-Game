@@ -1,9 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
 #gameContainer {
     background-color:greenyellow;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+
 #playerContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: none;
     justify-content:space-between;
     align-content: center;
     background-color: gold;
@@ -39,7 +51,22 @@
 } 
 
 #raceContainer {
-    background-color: coral;
+   flex: 1;
+   display: flex;
+   background-color: coral;
+}
 
-    
+#raceContainer div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#raceContainer img {
+    width: 50px;
+    height: 50px;
+
 }

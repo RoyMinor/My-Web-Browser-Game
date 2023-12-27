@@ -37,7 +37,7 @@ const incorrectAnswerPenalty = 5;
 // How many questions the users get
 const maxQuestions = 10;
 //Question Duration in milliseconds ( 1000 milliseconds = 1second )
-const timerDuration = 15000;
+const timerDuration = 10000;
 
 //Scoreboard and question tracker
 let score = 0;

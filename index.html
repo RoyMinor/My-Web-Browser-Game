@@ -12,29 +12,18 @@
     <div id="playerContainer">
      <div>
         <img src="cat_4659716.png" alt="cat-sitting"width="100px" height="100px">
-        <span><h5>Players Name</h5></span>
+        <input type="text" id="playerName1" placeholder="Your Name Here"></input>
         <button id="start"> Enter Name</button>
      </div>
     
 
      <div>
         <img src="rat-looking-right_84446.png"alt="rat-looking-right" width="100px" height="100px" >
-        <span><h5>Players Name</h5></span>
+        <input type="text" id="playerName2" placeholder="Your Name Here"></input>
         <button id="start">Enter Name</button>    
      </div>
     </div>
-    <!-- Race Track -->
-    <div id="raceContainer">
-    <div>
-        <img src="sitting-mouse_74285.png" alt="mouse-running" width="50px" height="50px">
-       
-    </div> 
     
-    <div>    
-        <img src="domestic-cat-shape_47197.png"alt="cat-running" width="50px" height="50px" >
-        
-    </div>
-    </div>
    <!-- // question deck -->
      <!-- //score board -->
      <div class="scoreBoard">
@@ -54,12 +43,28 @@
         <!-- <p id="answer">Click the button when Ready to display question</p> -->
         <button id="button">Generate Questions</button> 
     </span>
- </div>
+ 
+
+git </div>
+ <!-- Race Track -->
+ <div id="raceContainer">
+    <div>
+        <img src="sitting-mouse_74285.png" alt="mouse-running" width="50px" height="50px">
+       
+    </div> 
+    
+    <div>    
+        <img src="domestic-cat-shape_47197.png"alt="cat-running" width="50px" height="50px" >
+        
+    </div>
+    </div>
 
      <!-- answers box -->
+     <span>
      <input type="text" id="userAnswer" placeholder="type answer here">
  <!-- submit button -->
  <button id="submit">Submit Answer</button>
+ </span>
  <script src="index.js"></script>
  <script>
     function updateScore() {
