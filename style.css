@@ -15,26 +15,36 @@ body, html {
 
 #playerContainer {
     display: flex;
-    flex-wrap: none;
-    justify-content:space-between;
-    align-content: center;
+    
+    justify-content:space-around;
+    
     background-color: gold;
-    width: 800px
+    /* width: 800px;
+    height: 150px; */
+    
+}
+
+.player {
+    text-align: center;
 }
 
 .scoreBoard {
     background-color: cornflowerblue;
-    width: 800px;
+    text-align: center;
+    /* width: 800px;
+    height: 200px; */
 }
 .questions {
     background-color: skyblue;
-    width: 800px;
-    height: 500px;
+    text-align: center;
+    /* width: 800px;
+    height: 400px; */
 }
 
 .scoreCount {
     background-color: darkgoldenrod;
-    width: 800px;
+    /* width: 800px;
+    height: 50px; */
 }
 
 
@@ -53,19 +63,22 @@ body, html {
 #raceContainer {
    flex: 1;
    display: flex;
+   flex-direction: column;
    background-color: coral;
+   /* width: 800px;
+   height: 100%; */
 }
 
-#raceContainer div {
-    width: 100%;
+#racer {
+    width: 50%;
     display: flex;
-    flex-direction: column;
+    border: 2px solid blueviolet;
     align-items: center;
     justify-content: center;
 
 }
 
-#raceContainer img {
+.racer img {
     width: 50px;
     height: 50px;
 
