@@ -25,10 +25,6 @@ let questions = [
  ];
 
 
-// let availableQuestions =[];
-// let question = [
-//     {question: "Biggest state?", answers: [{answer: "Tx", correct: false}, {answer: "Alaska", correct: true}]
-//  }];
 let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30', 'Whale Shark', '36' ];
 
 // How points are calculated
@@ -37,15 +33,16 @@ const incorrectAnswerPenalty = 5;
 // How many questions the users get
 const maxQuestions = 10;
 //Question Duration in milliseconds ( 1000 milliseconds = 1second )
-const timerDuration = 10000;
+const timerDuration = 15000;
 
 //Score board counter method
 const player1 = {name: "mouse", score: 0};
 const player2 = {name: "cat", score: 0};
+let score = 0;
 
-function updateScores() {
-    document.getElementById('score1').textContent = `Player 1 Score: ${player1.score}`;
-    document.getElementById('score2').textContent = `Player 2 Score: ${player2.score}`;
+function updateScore() {
+    document.getElementById('scoreMouse').textContent = `Mouse Score: ${player1.score}`;    
+    document.getElementById('scoreCat').textContent = `Cat Score: ${player2.score}`;
 }
 
 document.getElementById('start1').addEventListener('click', function() {
@@ -59,8 +56,7 @@ document.getElementById('start2').addEventListener('click', function() {
     updateScores();
 
 });
-//Scoreboard and question tracker
-let score = 0;
+//question tracker
 let askedQuestions = [];
 
 //Had to create a promise-based setTimeout(async)displayedRandomQuestion, checkAnswer functions
@@ -86,7 +82,6 @@ async function displayRandomQuestion() {
   console.log()
 
   //Clear previous Answer
- document.getElementById('userAnswer').value = '';
 //Question timer method
 await delay(timerDuration);
 // Questions array
@@ -97,33 +92,51 @@ askedQuestions.push(randomQuestion);
 
 
 //Check answers Method
-async function checkAnswer() {
-    const userAnswer = document.getElementById('userAnswer').value.trim();
+
+// MOuse's Answer
+document.getElementById('submitMouse').addEventListener('click', function() {
+    checkAnswer('mouse');
+});
+
+// Cat's Answer
+document.getElementById('submitCat').addEventListener('click', function() {
+    checkAnswer('cat');
+});
+
+async function checkAnswer(player) {
+    const userAnswer = document.getElementById(`${player}Answer`).value.trim();
     const currentQuestionIndex = questions.indexOf(document.querySelector('.questions .displayArea').textContent);
 
 
     if (currentQuestionIndex !== -1 && userAnswer.toLowerCase() === answers[currentQuestionIndex].toLowerCase()) {
         alert('Correct Answer!');
-        score += correctAnswerPoints;
-        updateScore(); //update displayed scoring
+        if (player === 'mouse') {
+            player1.score += correctAnswerPoints;
+        } else if (player === 'cat') {
+            player2.score += correctAnswerPoints;
+        }
+        
     } else {
         alert('Inncorret Answer. Please try again.');
-        score -=  incorrectAnswerPenalty;
+        if (player === 'mouse') {
+            player1.score -= incorrectAnswerPenalty;
+        } else if (player === 'cat') {
+            player2.score -= incorrectAnswerPenalty;
+        }
+       
     }
-    updateScore();
-
-    console.log(checkAnswer)
-    await displayRandomQuestion();
+    updateScore();  //updating the score display
+   await displayRandomQuestion();
     
 }
 
 //Function to display update
 function updateScore() {
-    document.getElementById('score').textContent = `Score: ${score}`;
+    document.getElementById('scoreMouse').textContent = `Mouse Score: ${player1.score}`;
+    document.getElementById('scoreCat').textContent = `Cat Score: ${player2.score}`;
 }
 //Buttons
-document.getElementById('button').addEventListener('click', displayRandomQuestion);
-document.getElementById('submit').addEventListener('click', checkAnswer);
+document.getElementById('generateQuestion').addEventListener('click', displayRandomQuestion);
 
 displayRandomQuestion();
 

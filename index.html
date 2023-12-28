@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat vs Mouse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="gameImages.png"></script>
 </head>
 <body>
 <div id="gameContainer">
@@ -14,22 +13,23 @@
      <div class="player">
         <img src="rat-looking-right_84446.png"alt="rat-looking-right" width="100px" height="100px" >
         <input type="text" id="playerName1" placeholder="Your Name Here"></input>
-        <button id="start"> Enter Name</button>
+        <button id="start1"> Enter Name</button>
      </div>
     
 
      <div class="player">
         <img src="cat_4659716.png" alt="cat-sitting"width="100px" height="100px">
         <input type="text" id="playerName2" placeholder="Your Name Here"></input>
-        <button id="start">Enter Name</button>    
+        <button id="start2">Enter Name</button>    
      </div>
     </div>
     
-   <!-- // question deck -->
+   
      <!-- //score board -->
      <div class="scoreBoard">
      <h2>Score board</h2>
-     <p id="score">Score: 0</p>
+     <p id="scoreMouse">Score: 0</p>
+     <p id="scoreCat">Score: 0</p>
      <!-- alert for winning character -->
      <img src="" alt="">
      <img src="" alt="">
@@ -41,8 +41,7 @@
      <!-- Questions Container -->
  <div class="questions">
     <span class="displayArea">
-        <!-- <p id="answer">Click the button when Ready to display question</p> -->
-        <button id="button">Generate Questions</button> 
+        <button id="generateQuestion">Generate Questions</button> 
     </span>
  </div>
 
@@ -60,11 +59,19 @@
     </div>
 
      <!-- answers box -->
-     <span>
-     <input type="text" id="userAnswer" placeholder="type answer here">
- <!-- submit button -->
- <button id="submit">Submit Answer</button>
- </span>
+  <span>
+     <input type="text" id="mouseAnswer" placeholder="Mouse Answer Here">
+    <!-- submit button -->
+     <button id="submitMouse">Submit Mouse Answer</button>
+  </span>
+
+
+  <span> 
+     <input type="text" id="catAnswer" placeholder="Cat Answers Here">
+    <!-- submit button -->
+    <button id="submitCat">Submit Cat Answer</button>
+  </span> 
+
  <script src="index.js"></script>
  
 </div>    
