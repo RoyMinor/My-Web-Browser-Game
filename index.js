@@ -27,6 +27,15 @@ let questions = [
 
 let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30', 'Whale Shark', '36' ];
 
+// Movement list
+const moveList = [
+    {left: 50, top: -50},
+    {left: 100, top: 25},
+    {left: 150, top: -100},
+    {left: 250, top: -250},
+    {left: 400, top: 300},
+];
+
 // How points are calculated
 const correctAnswerPoints = 10;
 const incorrectAnswerPenalty = 5;
@@ -47,13 +56,13 @@ function updateScore() {
 
 document.getElementById('start1').addEventListener('click', function() {
     player1.name = document.getElementById('playerName1').value;
-    updateScores();
+    updateScore();
 
 });
 
 document.getElementById('start2').addEventListener('click', function() {
     player2.name = document.getElementById('playerName2').value;
-    updateScores();
+    updateScore();
 
 });
 //question tracker
@@ -82,6 +91,8 @@ async function displayRandomQuestion() {
   console.log()
 
   //Clear previous Answer
+  document.getElementById('mouseAnswer').value = '';
+  document.getElementById('catAnswer').value = '';
 //Question timer method
 await delay(timerDuration);
 // Questions array
@@ -102,6 +113,22 @@ document.getElementById('submitMouse').addEventListener('click', function() {
 document.getElementById('submitCat').addEventListener('click', function() {
     checkAnswer('cat');
 });
+// Move Racer 
+const mouseRacer = document.getElementById('mouseRacer');
+const catRacer = document.getElementById('catRacer');
+
+function moveRacer(racer, move) {
+        racer.style.left = `${move.left}px`;
+        racer.style.top = `${move.top}px`;
+    }
+
+    function handleCorrectAnswer(player, moveListIndex) {
+        const racer = player === 'mouse' ? mouseRacer : catRacer;
+        const move = moveList[ moveListIndex];
+
+        racer.style.animationDuration = '5s';
+        moveRacer(racer, move);  
+    }
 
 async function checkAnswer(player) {
     const userAnswer = document.getElementById(`${player}Answer`).value.trim();
@@ -112,12 +139,14 @@ async function checkAnswer(player) {
         alert('Correct Answer!');
         if (player === 'mouse') {
             player1.score += correctAnswerPoints;
+            handleCorrectAnswer(player, 0);
         } else if (player === 'cat') {
             player2.score += correctAnswerPoints;
+            handleCorrectAnswer(player, 0);
         }
         
     } else {
-        alert('Inncorret Answer. Please try again.');
+        alert('Inncorret Answer!');
         if (player === 'mouse') {
             player1.score -= incorrectAnswerPenalty;
         } else if (player === 'cat') {
