@@ -15,9 +15,7 @@ body, html {
 
 #playerContainer {
     display: flex;
-    
-    justify-content:space-around;
-    
+    justify-content:space-between;
     background-color: gold;
     
     
@@ -60,6 +58,8 @@ body, html {
    flex: 1;
    display: flex;
    flex-direction: column;
+   align-items:flex-start;
+   justify-content: center;
    background-color: coral;
    
 }
