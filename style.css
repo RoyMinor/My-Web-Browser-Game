@@ -1,11 +1,18 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
+    background-color: gold;
+}
+
+#Title {
+    background-color: gold;
+    text-align: center;
+
 }
 
 
 #gameContainer {
-    background-color:greenyellow;
+    background-color:gold;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,22 +38,23 @@ body, html {
     
 }
 .questions {
-    background-color: skyblue;
+    background-color: gold;
     text-align: center;
     
 }
 
-.scoreCount {
-    background-color: darkgoldenrod;
-    
+
+.answerBox {
+    display: flex;
+    flex-direction: row-reverse;
+
 }
 
 
 .displayArea {
     margin: 0 auto;
-    color:black;
-    border: 5px solid black;
-    background-color: purple;
+    color:white;
+    background-color: black;
     width: 500px;
     height: 200px;
     display: flex;
@@ -60,14 +68,13 @@ body, html {
    flex-direction: column;
    align-items:flex-start;
    justify-content: center;
-   background-color: coral;
+   background-color: cornflowerblue;
    
 }
 
 #racer {
     width: 50%;
     display: flex;
-    border: 2px solid blueviolet;
     align-items: center;
     justify-content: center;
     

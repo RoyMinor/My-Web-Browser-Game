@@ -12,6 +12,7 @@ const player1 = {name: "mouse", score: 0};
 const player2 = {name: "cat", score: 0};
 let score = 0;
 
+// function to update scores
 function updateScore() {
     document.getElementById('scoreMouse').textContent = `Mouse Score: ${player1.score}`;    
     document.getElementById('scoreCat').textContent = `Cat Score: ${player2.score}`;
@@ -29,8 +30,16 @@ document.getElementById('start2').addEventListener('click', function() {
 
 });
 
-//Function to display update
-function updateScore() {
-    document.getElementById('scoreMouse').textContent = `Mouse Score: ${player1.score}`;
-    document.getElementById('scoreCat').textContent = `Cat Score: ${player2.score}`;
-}
+// // Function to determine Winner
+// function theWinnerIs() {
+//     if (player1.score > player2.score) {
+//         return player1.name;
+//     }else if (player1.score < player2.score) {
+//     return player2.name;
+//     } else {
+//         return "It's a tie, please try again"
+//   }
+// }
+
+// const winner = theWinnerIs
+// alert(`Game Over! ${winner} is the winner!`);  

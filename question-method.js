@@ -9,11 +9,11 @@ function delay(milliseconds) {
 //Question Selection Method
 async function displayRandomQuestion() {
     const availableQuestions = questions.filter(q => !askedQuestions.includes(q));
-
     if (availableQuestions.length === 0) {
-        alert('Game Over! Please try again');
         return;
     }
+
+
   const randomIndex = Math.floor(Math.random() * availableQuestions.length);
   const randomQuestion = availableQuestions[randomIndex];
  console.log(randomQuestion)
@@ -33,8 +33,7 @@ askedQuestions.push(randomQuestion);
 
 }
 displayRandomQuestion();
-//Buttons
-// document.getElementById('generateQuestion').addEventListener('click', displayRandomQuestion);
+
 
 //Check answers Method
 

@@ -31,6 +31,8 @@ let questions = [
 
 let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30', 'Whale Shark', '36' ];
 
+
+
 // Movement list
 const moveList = [
 
@@ -40,11 +42,11 @@ const moveList = [
     500,
     700,
     900,
-    1200,
+    1000,
+    1100,
+    1300,
     1500,
-    1700,
-    2000,
-    2200
+    2000
 ];
 
 
