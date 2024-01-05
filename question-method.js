@@ -10,6 +10,8 @@ function delay(milliseconds) {
 async function displayRandomQuestion() {
     const availableQuestions = questions.filter(q => !askedQuestions.includes(q));
     if (availableQuestions.length === 0) {
+        alert("Game Over!");
+        winnerCircle();
         return;
     }
 
@@ -34,7 +36,35 @@ askedQuestions.push(randomQuestion);
 }
 displayRandomQuestion();
 
+// Determining the winner
+function winnerCircle() {
+    let winner;
 
+    if (player1.score > player2.score) {
+        winner = "Mouse is the Winner!";
+    } else if (player1.score < player2.score) {
+        winner = "Cat is the Winner!";
+    } else {
+        winner = "It's a Tie";
+    }
+    alert(winner);
+
+    const theWinnerIs = document.querySelector('.theWinnerIs');
+    const winnerImage = document.createElement('img');
+    const winnerText = document.createElement('p');
+
+    if (player1.score > player2.score) {
+        winnerImage.src = '8943589.jpg';
+    } else if (player1.score < player2.score) {
+        winnerImage.src = 'ubi7_1qy7_210708.jpg';
+    } else {
+        winnerImage.src = '2558008.jpg';   
+    }
+
+    winnerText.textContent = winner;
+    theWinnerIs.appendChild(winnerImage);
+    theWinnerIs.appendChild(winnerText);
+}
 //Check answers Method
 
 // Mouse's Answer

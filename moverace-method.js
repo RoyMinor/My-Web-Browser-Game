@@ -19,7 +19,6 @@ function moveRacer(racer, position) {
         moveListIndex++;
 
         if(moveListIndex === moveList.length) {
-            alert(`${player} has reached the end!`);
 
             moveListIndex = 0
         }

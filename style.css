@@ -5,14 +5,12 @@ body {
 }
 
 #Title {
-    background-color: gold;
     text-align: center;
 
 }
 
 
 #gameContainer {
-    background-color:gold;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -22,10 +20,7 @@ body {
 
 #playerContainer {
     display: flex;
-    justify-content:space-between;
-    background-color: gold;
-    
-    
+    justify-content:space-between;    
 }
 
 .player {
@@ -38,7 +33,6 @@ body {
     
 }
 .questions {
-    background-color: gold;
     text-align: center;
     
 }

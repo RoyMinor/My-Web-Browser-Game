@@ -18,10 +18,10 @@ document.body.append(mouse);
 // start with an array of ten questions
 let questions = [
     'What is the the biggest state in the US? ',
-    'The colors red and blue combined together produces what color?', 
+    'The colors red and blue mixed together produces what color?', 
     'What is 5 x 3?', 'What is 13 + 12 ?',
-    'How many states are there in America?',
-    'What colors mixed together make orange?',
+    'How many states are there in the United States?',
+    'What colors mixed together produce the color orange?',
     'What is the third letter in the alphabet?', 
     'What is 10 x 3?',
     'What is the biggest fish in the ocean?',
@@ -40,13 +40,12 @@ const moveList = [
     200,
     350,
     500,
+    600,
     700,
-    900,
-    1000,
-    1100,
-    1300,
-    1500,
-    2000
+    750,
+    800,
+    850,
+    1000
 ];
 
 
