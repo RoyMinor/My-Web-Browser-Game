@@ -41,25 +41,32 @@ function winnerCircle() {
     let winner;
 
     if (player1.score > player2.score) {
-        winner = "Mouse is the Winner!";
+        winner = "Silly cat!, You gotta be quicker than that, Lol!";
     } else if (player1.score < player2.score) {
-        winner = "Cat is the Winner!";
+        winner = "I just LOVE Fast Food!, Yummy!";
     } else {
-        winner = "It's a Tie";
+        winner = "I DIDN'T mean for You to see that!";
     }
     alert(winner);
 
     const theWinnerIs = document.querySelector('.theWinnerIs');
     const winnerImage = document.createElement('img');
     const winnerText = document.createElement('p');
+    
 
     if (player1.score > player2.score) {
         winnerImage.src = '8943589.jpg';
+        
     } else if (player1.score < player2.score) {
         winnerImage.src = 'ubi7_1qy7_210708.jpg';
+        
     } else {
-        winnerImage.src = '2558008.jpg';   
+        winnerImage.src = '2558008.jpg'; 
+     
     }
+
+    winnerImage.width = 900;
+    winnerImage.height = 500;
 
     winnerText.textContent = winner;
     theWinnerIs.appendChild(winnerImage);

@@ -1,8 +1,4 @@
 //Character Icons
-// const player1 = {name: "mouse", score: 0};
-// const player2 = {name: "cat", score: 0};
-
-
 let cat = document.createElement('img')
 cat.src ='cat_4659716.png';
 cat.position = 'fixed';
