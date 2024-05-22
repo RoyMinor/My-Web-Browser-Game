@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("3.png");
+    background-image: url("public/license/assets/matt-nelson-dCNGrp_0GyM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
     
     
@@ -46,6 +49,7 @@ body {
 
 .scoreBoard {
     text-align: center;
+
     
 }
 .questions {
@@ -65,7 +69,7 @@ body {
 .displayArea {
     margin: 0 auto;
     color:black;
-    background-color: orange; 
+    background-color:cornflowerblue; 
     width: 500px;
     height: 200px;
     display: flex;
