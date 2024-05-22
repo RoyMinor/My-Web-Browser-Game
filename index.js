@@ -1,12 +1,12 @@
 //Character Icons
 let cat = document.createElement('img')
-cat.src ='cat_4659716.png';
+// cat.src ='cat_4659716.png';
 cat.position = 'fixed';
 cat.top = '0';
 document.body.append(cat);
 
 let mouse = document.createElement('img')
-mouse.src ='rat-looking-right_84446.png';
+// mouse.src ='rat-looking-right_84446.png';
 mouse.position = 'fixed';
 mouse.top = '0';
 document.body.append(mouse);
