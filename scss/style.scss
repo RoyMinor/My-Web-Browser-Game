@@ -101,7 +101,7 @@ body {
         width:$racer-icon;
         height:$racer-icon;
         position: relative;
-       @include animation();
+       @include animation(example, 1s);
     }
    }
   }
