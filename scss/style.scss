@@ -17,6 +17,23 @@ $secondary-color: cornflowerblue;
 $racer-icon: 50px;
 
 
+// @mixins
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin flexbox-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin animation($name, $duration) {
+    animation-name: $name;
+    animation-duration: $duration;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -38,8 +55,7 @@ body {
         flex-direction: column;
 
     #playerContainer {
-        display: flex;
-        justify-content: center;
+        @include flexbox-center();
     .player {
         text-align: center;
     }
@@ -49,7 +65,7 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 20px;
+        @include border-radius(20px);
         color: $primary-color;
         font-size: $font-size-winner;
     }
@@ -68,28 +84,24 @@ body {
         margin: 0 auto;
         width: $displayArea-width;
         height: $displayArea-height;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox-center();
         color: $primary-color;
         background-color: $secondary-color;
         font-size: $font-size-display;
-        border-radius: 8px;
+        @include border-radius(8px);
     }
 
     #racerContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
-        justify-content: center;
+        @include flexbox-center();
     
     .racer {
         width:$racer-icon;
         height:$racer-icon;
         position: relative;
-        animation-name: example;
-        animation-duration: 1s;
+       @include animation();
     }
    }
   }
