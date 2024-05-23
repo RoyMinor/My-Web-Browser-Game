@@ -1,0 +1,109 @@
+// containers
+$container-width: 100vw;
+$container-height: 100vh;
+$displayArea-width: 500px;
+$displayArea-height: 200px;
+
+// font-size
+$font-size-title: 24px;
+$font-size-display: larger;
+$font-size-winner: 45px;
+
+// colors
+$primary-color: black;
+$secondary-color: cornflowerblue;
+
+// icons
+$racer-icon: 50px;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("public/license/assets/matt-nelson-dCNGrp_0GyM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        
+}
+
+#Title {
+    text-align: center;
+    font-size: $font-size-title;
+    color: $primary-color;
+
+}
+
+#gameContainer {
+    width: $container-width;
+    height: $container-height;
+    display: flex;
+    flex-direction: column;
+}
+
+#playerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    text-align: center;
+}
+
+.theWinnerIs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    color: $primary-color;
+    font-size: $font-size-winner;
+}
+
+.scoreBoard {
+    text-align: center;
+
+}
+
+.answerBox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+
+.displayArea {
+    margin: 0 auto;
+    width: $displayArea-width;
+    height: $displayArea-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    background-color: $secondary-color;
+    font-size: $font-size-display;
+    border-radius: 8px;
+}
+
+#racerContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+.racer {
+    width:$racer-icon;
+    height:$racer-icon;
+    position: relative;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    0% {left: 0; top: 0;}
+    20% {left: 20; top: 20%}
+    40% {left: 40; top: 40;}
+    60% {left: 60; top: 60;}
+    100% {left: 100; top: 100}
+}
