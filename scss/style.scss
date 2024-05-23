@@ -1,7 +1,13 @@
-@use "f-sizes";
-@use "colors";
-@use "containers";
-@use "mixins";
+
+@use 'partials/colors';
+@use 'partials/containers';
+@use 'partials/mixins';
+
+
+// font-size
+$font-size-title: 24px;
+$font-size-display: larger;
+$font-size-winner: 45px;
 
 
 // icons
