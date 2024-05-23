@@ -6,30 +6,25 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-#Title {
+body #Title {
   text-align: center;
   font-size: 24px;
   color: black;
 }
-
-#gameContainer {
+body #gameContainer {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-#playerContainer {
+body #gameContainer #playerContainer {
   display: flex;
   justify-content: center;
 }
-
-.player {
+body #gameContainer #playerContainer .player {
   text-align: center;
 }
-
-.theWinnerIs {
+body #gameContainer .theWinnerIs {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -37,18 +32,15 @@ body {
   color: black;
   font-size: 45px;
 }
-
-.scoreBoard {
+body #gameContainer .scoreBoard {
   text-align: center;
 }
-
-.answerBox {
+body #gameContainer .answerBox {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-
-.displayArea {
+body #gameContainer .displayArea {
   margin: 0 auto;
   width: 500px;
   height: 200px;
@@ -60,16 +52,14 @@ body {
   font-size: larger;
   border-radius: 8px;
 }
-
-#racerContainer {
+body #gameContainer #racerContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-
-.racer {
+body #gameContainer #racerContainer .racer {
   width: 50px;
   height: 50px;
   position: relative;

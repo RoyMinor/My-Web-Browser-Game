@@ -25,79 +25,74 @@ body {
     background-size: cover;
     background-position: center;
         
-}
+    #Title {
+        text-align: center;
+        font-size: $font-size-title;
+        color: $primary-color;
+    }
 
-#Title {
-    text-align: center;
-    font-size: $font-size-title;
-    color: $primary-color;
+    #gameContainer {
+        width: $container-width;
+        height: $container-height;
+        display: flex;
+        flex-direction: column;
 
-}
+    #playerContainer {
+        display: flex;
+        justify-content: center;
+    .player {
+        text-align: center;
+    }
+    }
+    
+    .theWinnerIs {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        color: $primary-color;
+        font-size: $font-size-winner;
+    }
 
-#gameContainer {
-    width: $container-width;
-    height: $container-height;
-    display: flex;
-    flex-direction: column;
-}
+    .scoreBoard {
+        text-align: center;
+   }
 
-#playerContainer {
-    display: flex;
-    justify-content: center;
-}
+    .answerBox {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 
-.player {
-    text-align: center;
-}
+    .displayArea {
+        margin: 0 auto;
+        width: $displayArea-width;
+        height: $displayArea-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary-color;
+        background-color: $secondary-color;
+        font-size: $font-size-display;
+        border-radius: 8px;
+    }
 
-.theWinnerIs {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    color: $primary-color;
-    font-size: $font-size-winner;
-}
-
-.scoreBoard {
-    text-align: center;
-
-}
-
-.answerBox {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-
-}
-
-.displayArea {
-    margin: 0 auto;
-    width: $displayArea-width;
-    height: $displayArea-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $primary-color;
-    background-color: $secondary-color;
-    font-size: $font-size-display;
-    border-radius: 8px;
-}
-
-#racerContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: center;
-}
-
-.racer {
-    width:$racer-icon;
-    height:$racer-icon;
-    position: relative;
-    animation-name: example;
-    animation-duration: 1s;
+    #racerContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+    
+    .racer {
+        width:$racer-icon;
+        height:$racer-icon;
+        position: relative;
+        animation-name: example;
+        animation-duration: 1s;
+    }
+   }
+  }
 }
 
 @keyframes example {
