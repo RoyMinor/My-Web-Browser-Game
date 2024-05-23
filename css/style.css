@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("public/license/assets/matt-nelson-dCNGrp_0GyM-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#Title {
+  text-align: center;
+  font-size: 24px;
+  color: black;
+}
+
+#gameContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#playerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.player {
+  text-align: center;
+}
+
+.theWinnerIs {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  color: black;
+  font-size: 45px;
+}
+
+.scoreBoard {
+  text-align: center;
+}
+
+.answerBox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.displayArea {
+  margin: 0 auto;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: cornflowerblue;
+  font-size: larger;
+  border-radius: 8px;
+}
+
+#racerContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.racer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+@keyframes example {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  20% {
+    left: 20;
+    top: 20%;
+  }
+  40% {
+    left: 40;
+    top: 40;
+  }
+  60% {
+    left: 60;
+    top: 60;
+  }
+  100% {
+    left: 100;
+    top: 100;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
