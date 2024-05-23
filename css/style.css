@@ -1,95 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url("public/license/assets/matt-nelson-dCNGrp_0GyM-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-body #Title {
-  text-align: center;
-  font-size: 24px;
-  color: black;
-}
-body #gameContainer {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-body #gameContainer #playerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #gameContainer #playerContainer .player {
-  text-align: center;
-}
-body #gameContainer .theWinnerIs {
+/* Error: Undefined variable.
+ *    ,
+ * 23 |         font-size: $font-size-title;
+ *    |                    ^^^^^^^^^^^^^^^^
+ *    '
+ *   scss/style.scss 23:20  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-  color: black;
-  font-size: 45px;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 23 \2502          font-size: $font-size-title;\a    \2502                     ^^^^^^^^^^^^^^^^\a    \2575 \a   scss/style.scss 23:20  root stylesheet";
 }
-body #gameContainer .scoreBoard {
-  text-align: center;
-}
-body #gameContainer .answerBox {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-body #gameContainer .displayArea {
-  margin: 0 auto;
-  width: 500px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: cornflowerblue;
-  font-size: larger;
-  border-radius: 8px;
-}
-body #gameContainer #racerContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #gameContainer #racerContainer .racer {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  animation-name: example;
-  animation-duration: 1s;
-}
-
-@keyframes example {
-  0% {
-    left: 0;
-    top: 0;
-  }
-  20% {
-    left: 20;
-    top: 20%;
-  }
-  40% {
-    left: 40;
-    top: 40;
-  }
-  60% {
-    left: 60;
-    top: 60;
-  }
-  100% {
-    left: 100;
-    top: 100;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */

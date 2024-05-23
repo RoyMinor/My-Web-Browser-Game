@@ -1,37 +1,13 @@
-// containers
-$container-width: 100vw;
-$container-height: 100vh;
-$displayArea-width: 500px;
-$displayArea-height: 200px;
+@use "f-sizes";
+@use "colors";
+@use "containers";
+@use "mixins";
 
-// font-size
-$font-size-title: 24px;
-$font-size-display: larger;
-$font-size-winner: 45px;
-
-// colors
-$primary-color: black;
-$secondary-color: cornflowerblue;
 
 // icons
 $racer-icon: 50px;
 
 
-// @mixins
-@mixin border-radius($radius) {
-    border-radius: $radius;
-}
-
-@mixin flexbox-center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin animation($name, $duration) {
-    animation-name: $name;
-    animation-duration: $duration;
-}
 
 
 body {
