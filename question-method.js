@@ -47,7 +47,6 @@ function winnerCircle() {
     } else {
         winner = "I DIDN'T mean for You to see that!";
     }
-    alert(winner);
 
     const theWinnerIs = document.querySelector('.theWinnerIs');
     const winnerImage = document.createElement('img');
@@ -100,7 +99,7 @@ async function checkAnswer(player) {
         }
         
     } else {
-        alert('Inncorret Answer!');
+        alert('Incorrect Answer!');
         if (player === 'mouse') {
             player1.score -= incorrectAnswerPenalty;
         } else if (player === 'cat') {

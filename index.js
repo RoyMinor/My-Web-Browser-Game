@@ -15,9 +15,10 @@ document.body.append(mouse);
 let questions = [
     'What is the the biggest state in the US? ',
     'The colors red and blue mixed together produces what color?', 
-    'What is 5 x 3?', 'What is 13 + 12 ?',
+    'What is 5 x 3?', 
+    'What is 13 + 12 ?',
     'How many states are there in the United States?',
-    'What colors mixed together produce the color orange?',
+    'What is 100 + 100?',
     'What is the third letter in the alphabet?', 
     'What is 10 x 3?',
     'What is the biggest fish in the ocean?',
@@ -25,79 +26,29 @@ let questions = [
  ];
 
 
-let answers = ['Alaska', 'Purple', '15', '25', '50', 'Yellow and Red', 'C', '30', 'Whale Shark', '36' ];
+let answers = ['Alaska', 'Purple', '15', '25', '50', '200', 'C', '30', 'Whale Shark', '36' ];
 
 
 
 // Movement list
 const moveList = [
 
-    100,
     200,
-    350,
-    500,
+    400,
     600,
-    700,
-    750,
     800,
-    850,
-    1000
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    1900
 ];
 
 
 
 
     
-
-
-
-
-// // Format for questions
-//  let mockData = questions.length;
-
-//  let questionList = {
-//     "QNA1": {
-//             "question1": "What is the biggest state in the US?",
-//             "answer1": "Alaska",
-//         },
-//     "QNA2": {
-//             "question2": "The color red and blue makes what color?",
-//             "answer2": "Purple",
-//         },
-//     "QNA3": {
-//             "question3": "What is 5 x 3?",
-//             "answer3": "15",
-//         },
-//     "QNA4": {
-//             "question4": "What is 13 + 12 ?",
-//             "answer4": "25",
-//         },
-//     "QNA5": {
-//             "question5": "How many states are there in America?",
-//             "answer5": "50",
-//         },
-//      "QNA6": {
-//             "question6": "What colors mixed together make orange?",
-//             "answer6": "Yellow and Red",
-//         },
-//     "QNA7": {
-//             "question7": "What is the third letter in the alphabet?",
-//             "answer7": "C",
-//         },
-//     "QNA8": {
-//             "question8": "What is 10 x 3?",
-//             "answer8": "30",
-//         },
-//     "QNA9": {
-//             "question9": "What is the biggest fish in the ocean?",
-//             "answser9": "Whale Shark",
-//         },
-//     "QNA10": {
-//             "question10": "What is 6 x 6?",
-//             "answer10": "36",
-//         },
-//     }
-
 
 
 
