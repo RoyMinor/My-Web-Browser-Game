@@ -3,84 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat vs Mouse</title>
+    <title>Cat vs. Mouse</title>
     <link rel="stylesheet" href="style.css">
     <!-- <script src="https://kit.fontawesome.com/9d9165853d.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-    <div id="Title">
-    <header><h1>Cat vs. Mouse</h1></header>
-    <p><h4>Are you the Predator or the Prey? </h4></p>
-    </div>
+    <header>
+        <h1>Cat vs. Mouse</h1>
+        <h4>Are you the Predator or the Prey?</h4>
+    </header>
 
-<div id="gameContainer">
-    <!-- Player selection -->
-    <div id="playerContainer">
-     <div class="player">
+    <div id="gameContainer">
+        <!-- Player selection -->
+        <div id="playerContainer">
+            <div class="player">
+                <label for="playerName1">Player 1 Mouse</label>
+                <input type="text" id="playerName1" placeholder="Your Name Here">
+                <button id="start1">Enter Name</button>
+                <img src="public/license/assets/rat-looking-right_84446.png" alt="Mouse running" width="100px" height="100px">
+            </div>
+
+            <div class="player">
+                <img src="public/license/assets/cat_4659716.png" alt="Cat sitting" width="100px" height="100px">
+                <label for="playerName2">Player 2 Cat</label>
+                <input type="text" id="playerName2" placeholder="Your Name Here">
+                <button id="start2">Enter Name</button>
+            </div>
+        </div>
+
+        <div class="theWinnerIs"></div>
         
-        <input type="text" id="playerName1" placeholder="Your Name Here"></input>
-        <button id="start1"> Enter Name</button>
-        <img src="public/license/assets/rat-looking-right_84446.png"alt="rat-looking-right, photo by freepik.com" width="100px" height="100px">
-     </div>
-    
+        <!-- Score board -->
+        <div class="scoreBoard">
+            <h2>Scoreboard</h2>
+            <p id="scoreMouse">Mouse: 0</p>
+            <p id="scoreCat">Cat: 0</p>
+        </div>
 
-     <div class="player">
-        <img src="public/license/assets/cat_4659716.png" alt="cat-sitting, photo by DinosoftLabs"width="100px" height="100px">
-        <input type="text" id="playerName2" placeholder="Your Name Here"></input>
-        <button id="start2">Enter Name</button>    
-     </div>
+        <!-- Questions Container -->
+        <div class="questions">
+            <span class="displayArea">
+                <button id="generateQuestion">Generate Questions</button>
+            </span>
+        </div>
+
+        <!-- Race Track -->
+        <div id="raceContainer">
+            <div id="mouseRacer" class="racer">
+                <img src="public/license/assets/sitting-mouse_74285.png" alt="Mouse running" width="50px" height="50px">
+            </div> 
+
+            <div id="catRacer" class="racer">
+                <img src="public/license/assets/domestic-cat-shape_47197.png" alt="Cat running" width="50px" height="50px">
+            </div>
+        </div>
+
+        <!-- Answers Box -->
+        <div class="answerBox">
+            <span>
+                <input type="text" id="mouseAnswer" placeholder="Mouse Answer Here">
+                <button id="submitMouse">Submit Mouse Answer</button>
+            </span>
+            <span>
+                <input type="text" id="catAnswer" placeholder="Cat Answer Here">
+                <button id="submitCat">Submit Cat Answer</button>
+            </span>
+        </div>
+
+        <script src="moverace-method.js"></script>
+        <script type="module" src="question-method.js"></script>
+        <script src="point-method.js"></script>
+        <script src="index.js"></script>
     </div>
-
-    <div class="theWinnerIs"></div>
-    
-   
-     <!-- //score board -->
-     <div class="scoreBoard">
-     <h2>Score board</h2>
-     <p id="scoreMouse">Mouse: 0</p>
-     <p id="scoreCat">Cat: 0</p>
-     
-    </div>
-     <!-- Questions Container -->
- <div class="questions">
-    <span class="displayArea">
-        <button id="generateQuestion">Generate Questions</button> 
-    </span>
- </div>
-
- <!-- Race Track -->
- <div id="raceContainer">
-    <div id="mouseRacer" class="racer">
-        <img src="public/license/assets/sitting-mouse_74285.png" alt="mouse-running, photo by freepik.com" width="50px" height="50px">
-       
-    </div> 
-    
-    <div id="catRacer" class="racer">    
-        <img src="public/license/assets/domestic-cat-shape_47197.png"alt="cat-running, photo by freepik.com" width="50px" height="50px" >
-        
-    </div>
-    </div>
-
-     <!-- answers box -->
-<div class="answerBox">
-      <span>
-     <input type="text" id="mouseAnswer" placeholder="Mouse Answer Here">
-    <!-- submit button -->
-     <button id="submitMouse">Submit Mouse Answer</button>
-    </span>
- 
-  <span> 
-     <input type="text" id="catAnswer" placeholder="Cat Answers Here">
-    <!-- submit button -->
-    <button id="submitCat">Submit Cat Answer</button>
-  </span>
-</div>
-
- <script src="moverace-method.js"></script>
- <script type="module" src="question-method.js"></script>
- <script src="point-method.js"></script>
- <script src="index.js"></script>
- 
-</div>    
 </body>
 </html>

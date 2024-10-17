@@ -45,7 +45,7 @@ function winnerCircle() {
     } else if (player1.score < player2.score) {
         winner = "I just LOVE Fast Food!, Yummy!";
     } else {
-        winner = "I DIDN'T mean for You to see that!";
+        winner = "OOps! I DIDN'T mean for You to see that!";
     }
 
     const theWinnerIs = document.querySelector('.theWinnerIs');
@@ -61,7 +61,7 @@ function winnerCircle() {
         
     } else {
         winnerImage.src = '2558008.jpg'; 
-     
+        alert("We have a tie!")
     }
 
     winnerImage.width = 900;

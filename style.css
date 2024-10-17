@@ -5,16 +5,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-        
 }
 
-#Title {
+header {
     text-align: center;
     color: black;
-
+    margin: 20px 0; /* Add some space around the header */
 }
-
-
 
 #gameContainer {
     width: 100vw;
@@ -23,16 +20,16 @@ body {
     flex-direction: column;
 }
 
-
 #playerContainer {
     display: flex;
-    justify-content:space-between;
-        
+    justify-content: space-between;
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .player {
     text-align: center;
-    
+    flex: 1; /* Allow players to grow evenly */
+    margin: 0 10px; 
 }
 
 .theWinnerIs {
@@ -46,69 +43,55 @@ body {
 
 .scoreBoard {
     text-align: center;
-
-    
+    margin: 20px 0; /* Add margin for separation */
 }
+
 .questions {
     text-align: center;
-    
+    margin: 20px 0; /* Add margin for separation */
 }
-
 
 .answerBox {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-
+    flex-direction: row;
+    justify-content: space-around; /* Center answers in the available space */
+    margin: 20px 0; /* Add margin for separation */
 }
-
 
 .displayArea {
     margin: 0 auto;
-    color:black;
-    background-color:cornflowerblue; 
+    color: yellow;
+    background-color: rgba(100, 149, 237, 0.8);     border: 3px solid black; 
     width: 500px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: larger;
-    border-radius: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 50px;
 } 
 
 #raceContainer {
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   align-items:flex-start;
-   justify-content: center;
-   
-}
-
-#racer {
-    width: 50%;
+    flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items:flex-start;
     justify-content: center;
     
-    
-    
-
-}
-
+ }
 .racer {
     width: 50px;
     height: 50px;
     position: relative;
-    animation-name: example;
-    animation-duration: 1s;
-    
+    /* animation-name: example; */
+    /* animation-duration: 10s; */
 }
 
 @keyframes example {
     0% {left: 0; top: 0;}
-    20% {left: 20; top: 20%}
-    40% {left: 40; top: 40;}
-    60% {left: 60; top: 60;}
-    100% {left: 100; top: 100}
-} 
+    20% {left: 20%; top: 20%;}
+    40% {left: 40%; top: 40%;}
+    60% {left: 60%; top: 60%;}
+    100% {left: 100%; top: 100%;}
+}
