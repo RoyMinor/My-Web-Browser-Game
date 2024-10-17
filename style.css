@@ -9,7 +9,7 @@ body {
 
 header {
     text-align: center;
-    color: black;
+    color: black !important;
     margin: 20px 0; /* Add some space around the header */
 }
 
@@ -60,8 +60,8 @@ header {
 
 .displayArea {
     margin: 0 auto;
-    color: yellow;
-    background-color: rgba(100, 149, 237, 0.8);     border: 3px solid black; 
+    color: black;
+    background-color: rgba(100, 149, 237, 0.8);     border: 2px solid black; 
     width: 500px;
     height: 200px;
     display: flex;
