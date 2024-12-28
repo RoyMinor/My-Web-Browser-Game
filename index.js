@@ -14,7 +14,7 @@ document.body.append(mouse);
 // start with an array of ten questions
 let questions = [
     'What is the the biggest state in the US? ',
-    'The colors red and blue mixed together produces what color?', 
+    'When the colors red and blue mixed together, what color does it make?', 
     'What is 5 x 3?', 
     'What is 13 + 12 ?',
     'How many states are there in the United States?',
@@ -31,19 +31,19 @@ let answers = ['Alaska', 'Purple', '15', '25', '50', '200', 'C', '30', 'Whale Sh
 
 
 // Movement list
-const moveList = [
+// const moveList = [
 
-    200,
-    400,
-    600,
-    800,
-    1000,
-    1200,
-    1400,
-    1600,
-    1800,
-    1900
-];
+//     200,
+//     400,
+//     600,
+//     800,
+//     1000,
+//     1200,
+//     1400,
+//     1600,
+//     1800,
+//     1900
+// ];
 
 
 
